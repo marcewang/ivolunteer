@@ -45,7 +45,7 @@ class MainPage extends React.Component {
         <img src={hands} className="handpic" />
         <div className="formdiv">
           <form onSubmit={(e) => { this.props.handleSubmit("resultsPage", e) }}>
-            <h6>Enter your location:</h6>
+            <h5>Find volunteer opportunities:</h5>
 
             <select className="select-css" name="city" type="text" onChange={this.handleChange}>
               <option disabled selected>Select City</option>

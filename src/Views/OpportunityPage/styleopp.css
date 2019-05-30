@@ -1,0 +1,71 @@
+.outer-div {
+    display: flex;
+    flex-direction: column; 
+}
+
+.handpicture{
+    width:100%;
+    z-index: -1;
+    margin: -12rem auto -19rem;
+    filter: brightness(70%);
+    height: 1300px
+} 
+
+.formdiv15{
+    background: radial-gradient(rgba(255, 255, 255, 0.534),white);
+    width: 90%;
+    padding:3rem;
+    border-radius: 30px;
+    display: flex;
+    margin: -45rem auto;
+    /* margin-right:20px; */
+    height: 1000px;
+
+}
+.coinfo{
+    margin-right: 2rem;
+    line-height:normal;
+    font-size:12px;
+    margin-bottom:20px;
+    
+    /* width: 500px */
+    
+}
+.coinfo p{
+    margin-bottom: 3px
+}
+.coinfo h6{
+    margin-top: 25px;
+    font-weight: bold
+}
+
+.volinfo h1{
+    margin-bottom:20px;  
+}
+.date{
+    margin-bottom:2px;
+}
+.time{
+    margin-bottom:20px;
+}
+
+
+.button15{
+    background-image: linear-gradient(to right, #f5ba3b ,#cf1717);
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% ;
+    color: white;
+    /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    height: 40px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    border:none
+}
+
+.button15:hover {
+    background-position: right center; /* change the direction of the change here */
+  }
+
+

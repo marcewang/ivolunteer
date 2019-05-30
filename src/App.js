@@ -1,5 +1,5 @@
 import React from 'react';
-// import './App.css';
+import './App.css';
 import MainPage from "./Views/MainPage/MainPage"
 import ResultsPage from "./Views/ResultsPage/ResultsPage"
 import RegisterPage from "./Views/RegisterPage/RegisterPage"
@@ -17,6 +17,10 @@ import CoPostPage from './Views/CoPostPage/CoPostPage'
 import CoWelcomeBackPage from './Views/CoWelcomeBackPage/CoWelcomeBackPage';
 import CoAccountPage from './Views/CoAccountPage/CoAccountPage';
 import CongratsPostedPage from './Views/CongratsPostedPage/CongratsPostedPage'
+
+
+
+
 
 class App extends React.Component {
   constructor(props) {

@@ -1,0 +1,13 @@
+.image-inner{
+    position: fixed;
+    z-index:-20;
+    width:100%;
+    margin-top: -20rem;
+    filter: brightness(70%);
+}
+
+.opportunities{
+    display:flex;
+    border-radius: 20px;
+    flex-direction: column;
+}

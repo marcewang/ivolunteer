@@ -1,6 +1,7 @@
 import React from 'react'
 import Opportunity from '../../Components/Opportunity/Opportunity'
-
+import './styleresults.css'
+import hands from '../../Images/hands.jpg'
 
 class ResultsPage extends React.Component {
     constructor(props) {
@@ -27,10 +28,13 @@ class ResultsPage extends React.Component {
         } // we do this because usually the page loads first and then the componentdidmount gets loaded
         return (
             <div>
+                    <img className="image-inner" src={hands} alt="background" />
 
-                {this.state.data.map(data => {
-                    return <Opportunity handleOpportunity={this.props.handleOpportunity} data={data} />
-                })}
+                <div className="opportunities">
+                    {this.state.data.map(data => {
+                        return <Opportunity handleOpportunity={this.props.handleOpportunity} data={data} />
+                    })}
+                </div>
 
 
             </div>

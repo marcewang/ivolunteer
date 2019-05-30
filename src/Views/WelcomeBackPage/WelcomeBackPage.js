@@ -1,11 +1,15 @@
 import React from 'react'
+import './style.css'
+import colorhands from '../../Images/colorhands.jpg'
 
 function WelcomeBackPage(props) {
     return (
-        <div>
-            <h1>Welcome back! </h1>
-            <h2>Ready to find some exciting volunteering opportunities? </h2>
-            <h2>Click the button now! </h2><input onClick={() => props.changePage("mainPage")} type="submit" value="Find volunteering opportunities" />
+        <div className="outer7">
+            <img src={colorhands} className="handpic7" />
+            <div className="formdiv7">
+                <h1>Welcome back! </h1>
+                <input className="button7" onClick={() => props.changePage("mainPage")} type="submit" value="Find volunteering opportunities" />
+            </div>
         </div>
     )
 }

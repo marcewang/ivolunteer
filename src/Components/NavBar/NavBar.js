@@ -19,7 +19,7 @@ function NavBar(props) {
             {props.currentUser &&
                 <div>
                     <Button onClick={() => props.handleAccount("accountPage")}  >My Account </Button>
-                    <Button onClick={() => props.handleLogOut()}  >"Log Out" ></Button><br />
+                    <Button onClick={() => props.handleLogOut()}  >Log Out</Button><br />
                 </div>
             }
 

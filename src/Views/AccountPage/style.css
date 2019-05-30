@@ -1,5 +1,71 @@
-.users {
-  table-layout: fixed;
-  width: 100%;
-  white-space: nowrap;
+.handpic5{
+  position: absolute;
+  width:100%;
+  z-index:-5;
+  margin-top: -5rem;
+  height: 1300px
+}
+
+.allinfo5{
+  border: none;
+  background: radial-gradient(rgba(255, 255, 255, 0.534),white);
+  display:flex; 
+  flex-direction: column;
+  margin: auto;
+  width: 90%;
+  border-radius: 9px;
+  padding: 4rem;
+  margin-top: 5rem;
+}
+.allinfo5 img{
+  margin-right:30px
+}
+
+.allinfo5 h4{
+  display:flex;
+  margin-left: 1rem
+}
+
+.accountdiv5{
+  display:flex;
+  flex-direction: row;
+  margin-left: 1rem
+}
+
+
+.accountdiv5 div{
+  display: flex;
+  flex-direction: column;
+  flex:5;
+  margin:auto
+}
+
+.tablediv5{
+  z-index:10;
+  padding: 0;
+  margin: 0 1rem;
+  font-size: 16px;
+  
+}
+
+.users5{
+  
+  border: 4px solid #f5ba3b;
+
+  white-space: normal;
+}
+
+
+.users5 td{
+  border: 2px solid #f5ba3b;
+}
+
+.users5 th{
+  border: 2px solid #f5ba3b;
+  font-weight: bold;
+}
+
+.users5 tbody{
+  border: 3px solid #f5ba3b;
+  
 }
