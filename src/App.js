@@ -64,7 +64,7 @@ class App extends React.Component {
       let response = await this.signinUser()
       if (response === "error") {
         this.setState({ error: "Email/password combination failed", currentUser: undefined })
-        return 
+        return
         setTimeout(() => { this.setState({ error: undefined }) }, 3000)
       }
     } catch (error) {
@@ -149,11 +149,11 @@ class App extends React.Component {
   }
 
   setParentState = (data) => {
-    this.setState({ postdata: data, page: "congratsPosted" }, () => this.postAd())
+    this.setState({ postdata: data }, () => { this.postAd() })
   }
 
-  postAd = () => {
-    fetch('http://localhost:3000/postopportunity',
+  postAd = async () => {
+    const res = await fetch('http://localhost:3000/postopportunity',
       {
         method: 'POST',
         headers: {
@@ -173,7 +173,14 @@ class App extends React.Component {
           description: this.state.postdata && this.state.postdata.description
         })
       })
-      .then(res => res.json())
+
+    if (res.status === 400) {
+      await this.setState({ error: "All fields must be completed!" })
+      return setTimeout(() => this.setState({ error: "" }), 2000)
+    }
+    this.setState({ page: "congratsPosted" })
+    res.json()
+
   }
 
 
@@ -332,7 +339,7 @@ class App extends React.Component {
         {this.state.page === "signinPageCo" && <CoSignInPage error={this.state.error} handleCoSignIn={this.handleCoSignIn} />}
         {this.state.page === "coCongratsPage" && <CoCongratsPage changePage={this.changePage} />}
         {this.state.page === "welcomePageCo" && <CoWelcomeBackPage handlePost={this.handlePost} />}
-        {(this.state.page === "coPostPage" && this.state.userInfo) && <CoPostPage userInfo={this.state.userInfo} setParentState={this.setParentState} />}
+        {(this.state.page === "coPostPage" && this.state.userInfo) && <CoPostPage error={this.state.error} userInfo={this.state.userInfo} setParentState={this.setParentState} />}
         {this.state.page === "coAccountPage" && <CoAccountPage codata={this.state.accountInfo} userData={this.state.userInfo} />}
         {this.state.page === "congratsPosted" && <CongratsPostedPage changePage={this.changePage} />}
       </div>

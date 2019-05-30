@@ -1,20 +1,66 @@
 .body{
     background-color: white;
-    height: 120px;
+    height: 138px;
     display:flex;
-    flex-direction: horizontal; 
-    align-items: center
+    flex-direction: column; 
+    font-weight: bold;
 }
-/* @media only screen and (max-width: 600px) {
-    .body{
-    text-align: center;
-        color:green
-    }
-} */
+.logodiv{
+    background-color:white;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logodiv img{
+    margin: -30px 0;
+    height: 160px;
+    width: 160px;
+}
+
+.logodiv .btn-secondary{
+    margin: 0;
+    height: 2.4rem;
+    margin-right:5rem;
+    font-size: 1.2rem;
+    padding: 0rem 2rem;
+    display:flex;
+    align-content: center;
+    vertical-align: center;
+}
+
+.initialbtn{
+    display:flex;
+    justify-content: space-between;
+    background-color:#6c757d;
+    
+    /* height: 160px */
+}
+
+.btn-secondary{
+    transition: 0.5s;
+    background-size: 200% ;
+    /* color: white; */
+    border:#cf7017;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    height: 40px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    border:none;
+  
+    
+}
+
+.btn-secondary:hover {
+    background-position: right center; /* change the direction of the change here */
+    background-image: linear-gradient(to right, #f5ba3b ,#cf7017);
+  }
+
+
 
 .logo{
-    width:200px;
-    height: 200px
+    width:100px;
+    height: 100px
 }
 .logo:hover{
     cursor: pointer;

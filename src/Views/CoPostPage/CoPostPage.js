@@ -1,11 +1,14 @@
 import React from 'react'
-import { InputGroup, InputGroupText, InputGroupAddon, Input } from 'reactstrap';
+import { InputGroup, InputGroupText, InputGroupAddon, Input, Alert } from 'reactstrap';
 import hands from '../../Images/hands.jpg'
 import './stylecopost.css'
 import { TimePicker } from 'antd';
 import 'antd/dist/antd.css';
 import moment from 'moment';
 
+const capitalize = {
+    textTransform: 'capitalize'
+}
 
 class CoPostPage extends React.Component {
     constructor(props) {
@@ -22,8 +25,7 @@ class CoPostPage extends React.Component {
                 phone: this.props.userInfo[0].co_phone,
                 website: this.props.userInfo[0].co_website,
                 title: undefined,
-                description: undefined,
-                time: '10:00',
+                description: undefined
             }
         }
     }
@@ -63,7 +65,7 @@ class CoPostPage extends React.Component {
                                 <InputGroupAddon addonType="prepend">
                                     <InputGroupText>Date</InputGroupText>
                                 </InputGroupAddon>
-                                <Input onChange={this.handleClick} type="date" name="date" value={this.state.formData.date} required />
+                                <Input onChange={this.handleClick} type="date" name="date" value={this.state.formData.date} />
                             </InputGroup>
 
                             <InputGroup>
@@ -91,7 +93,7 @@ class CoPostPage extends React.Component {
                                 <InputGroupAddon addonType="prepend">
                                     <InputGroupText>City:</InputGroupText>
                                 </InputGroupAddon>
-                                <Input onChange={this.handleClick} type="text" name="city" value={this.state.formData.city} required />
+                                <Input style={capitalize} onChange={this.handleClick} type="text" name="city" value={this.state.formData.city} required />
                             </InputGroup>
                         </div>
                         <div className="row">
@@ -128,17 +130,17 @@ class CoPostPage extends React.Component {
                                 <InputGroupAddon addonType="prepend">
                                     <InputGroupText >Description:</InputGroupText>
                                 </InputGroupAddon>
-                                <Input  onChange={this.handleClick} type="textarea" name="description" value={this.state.formData.description} required />
+                                <Input onChange={this.handleClick} type="textarea" name="description" value={this.state.formData.description} required />
                             </InputGroup>
 
                         </div>
 
                     </form>
                     <button className="button10" onClick={() => this.props.setParentState(this.state.formData)}>Post</button>
-
+                    {this.props.error && <Alert color="danger">{this.props.error}</Alert>}
                 </div>
 
-            </div>
+            </div >
         )
     }
 

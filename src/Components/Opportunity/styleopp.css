@@ -6,7 +6,9 @@
     display:flex;
     background: radial-gradient(rgba(255, 255, 255, 0.493), white);
     flex-direction: row;
-    justify-content: space-between
+    justify-content: space-between;
+    font-weight: bold;
+    
 }
 .image{
   display:flex;
@@ -20,6 +22,7 @@
 }
 .information{
 width: 75%;
+line-height: 1rem;
 }
 
 .image img{

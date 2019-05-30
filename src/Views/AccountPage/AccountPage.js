@@ -1,13 +1,13 @@
 import React from 'react'
 import './style.css'
-import hands from '../../Images/hands.jpg'
+import colorhands from '../../Images/colorhands.jpg'
 import { Table } from 'reactstrap';
 import logo from '../../Images/logo.png'
 
 function AccountPage(props) {
     return (
         <div>
-            <img className="handpic5" src={hands} />
+            <img className="handpic5" src={colorhands} />
             <div className="allinfo5">
 
             <h4>My Account:</h4>

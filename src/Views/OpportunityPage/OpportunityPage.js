@@ -39,7 +39,7 @@ function OpportunityPage(props) {
 
                 <div className="volinfo">
                     <h1>{props.selectedOpportunity && props.selectedOpportunity.vol_title} </h1>
-                    <p className="date">Date: {props.selectedOpportunity && props.selectedOpportunity.vol_date} </p>
+                    <p className="date">Date: {props.selectedOpportunity && new Date(props.selectedOpportunity.vol_date).toDateString()} </p>
                     <p className="time">
                         Time: {props.selectedOpportunity && props.selectedOpportunity.vol_start_time} -{' '}
                         {props.selectedOpportunity && props.selectedOpportunity.vol_end_time}

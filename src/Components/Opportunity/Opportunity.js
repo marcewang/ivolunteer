@@ -12,21 +12,21 @@ class Opportunity extends React.Component {
 
     render() {
         return (
-            
-            
+
+
             <div className='box' onClick={() => this.props.handleOpportunity("opportunityPage", this.props.data.id)}>
                 <div className="image">
-                <img src={this.props.data.co_logo} alt="company logo" />
+                    <img src={this.props.data.co_logo} alt="company logo" />
                 </div>
                 <div className="information">
-                <p> Date: {new Date(this.props.data.vol_date).toDateString()}</p>
-                <p> Time: {this.props.data.vol_start_time} - {this.props.data.vol_end_time} </p>
-                <p> Address: {this.props.data.vol_location} </p>
-                <p> {this.props.data.vol_title} </p>
-                <p className="description"> Description: {this.props.data.vol_description} </p>
+                    <p> Date: {new Date(this.props.data.vol_date).toDateString()}</p>
+                    <p> Time: {this.props.data.vol_start_time} - {this.props.data.vol_end_time} </p>
+                    <p> Address: {this.props.data.vol_location} </p>
+                    <p> {this.props.data.vol_title} </p>
+                    <p className="description"> Description: {this.props.data.vol_description} </p>
+                </div>
             </div>
-            </div>
-            
+
         )
     }
 }

@@ -8,7 +8,7 @@
     z-index: -1;
     margin: -10rem auto -19rem;
     filter: brightness(70%);
-    height:1300px
+    height:1000px
 } 
 
 .formdiv10{
@@ -16,11 +16,12 @@
     padding: 1rem 3rem;
     border-radius: 20px;
     display: flex;
-    margin: -50rem auto;
+    margin: -30rem auto;
     width: fit-content;
     height: fit-content;
     flex-direction: column;
 }
+
 
 .formdiv10 h3{
     text-align: center;

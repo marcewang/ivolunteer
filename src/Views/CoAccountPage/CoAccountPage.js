@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.css'
-import hands from '../../Images/hands.jpg'
+import colorhands from '../../Images/colorhands.jpg'
 import { Table } from 'reactstrap';
 
 
@@ -9,7 +9,7 @@ function CoAccountPage(props) {
     { console.log('2', props.userData) } //array
     return (
         <div>
-            <img className="handpic4" src={hands} />
+            <img className="handpic4" src={colorhands} />
             <div className="allinfo">
 
                 <h4>My Account:</h4>

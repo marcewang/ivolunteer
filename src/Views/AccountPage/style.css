@@ -1,9 +1,8 @@
 .handpic5{
-  position: absolute;
+  position: fixed;
   width:100%;
   z-index:-5;
-  margin-top: -5rem;
-  height: 1300px
+  margin-top: -15rem;
 }
 
 .allinfo5{

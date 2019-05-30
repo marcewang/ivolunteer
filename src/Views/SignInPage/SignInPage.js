@@ -30,7 +30,7 @@ function SignInPage(props) {
 
                     <input className="button3" type="submit" value="Sign In" />
                     {props.error &&
-                        <p style={{color:'red'}}>{props.error}</p>}
+                        <Alert color="danger">{props.error}</Alert>}
 
                 </form>
 
